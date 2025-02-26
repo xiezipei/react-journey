@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>loop</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const products = [
+        { title: 'Cabbage', id: 1 },
+        { title: 'Garlic', id: 2 },
+        { title: 'Apple', id: 3 },
+      ];
+
+      const ProductList = () => {
+        // 写法 1：使用 for...of 循环遍历 products
+        const listItems = [];
+        for (const product of products) {
+          listItems.push(<li key={product.id}>{product.title}</li>);
+        }
+
+        // 写法 2：map 方法会返回一个新数组，非常适合 React 的列表渲染
+        // const listItems = products.map((product) => <li key={product.id}>{product.title}</li>);
+
+        return <ul>{listItems}</ul>;
+      };
+
+      function MyApp() {
+        return (
+          <div>
+            <ProductList />
+          </div>
+        );
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
+    </script>
+  </body>
+</html>
