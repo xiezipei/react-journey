@@ -10,15 +10,24 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      const isShow = true;
+      const isShow = false;
 
       const Content = () => {
         let content;
+
+        // 写法 1
         if (isShow) {
-          content = <div>Blow up!</div>;
+          content = <div>Blow up with `if`!</div>;
         } else {
           content = <div>Nothing happened.</div>;
         }
+
+        // 写法 2（三元表达式）
+        // content = isShow ? <div>Blow up with `?`!</div> : <div>Nothing happened.</div>;
+
+        // 写法 3（不需要 else）
+        // content = isShow && <div>Blow up with `&&` !</div>;
+
         return content;
       };
 
