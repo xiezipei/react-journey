@@ -2,30 +2,30 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>add-style</title>
+    <title>condition</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <style>
-      .square {
-        border: 3px solid #ccc;
-        width: 100px;
-        height: 100px;
-        display: inline-block;
-      }
-    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      function Square() {
-        return <div className="square"></div>;
-      }
+      const isShow = true;
+
+      const Content = () => {
+        let content;
+        if (isShow) {
+          content = <div>Blow up!</div>;
+        } else {
+          content = <div>Nothing happened.</div>;
+        }
+        return content;
+      };
 
       function MyApp() {
         return (
           <div>
-            <Square />
+            <Content />
           </div>
         );
       }
