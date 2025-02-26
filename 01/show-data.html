@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>show-data</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const user = {
+        name: '谢小沛',
+        occupation: 'Front-end Developer',
+      };
+
+      const Profile = () => {
+        return (
+          <>
+            <p>姓名：{user.name} </p>
+            <p>职业：{user.occupation}</p>
+          </>
+        );
+      };
+
+      function MyApp() {
+        return (
+          <div>
+            <Profile />
+          </div>
+        );
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
+    </script>
+  </body>
+</html>
