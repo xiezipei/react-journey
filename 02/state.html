@@ -12,10 +12,16 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      const { useState } = React;
+      const { useState, useEffect } = React;
 
       function MyBtn() {
         const [count, setCount] = useState(0);
+
+        // Hook 只能在组件顶层调用，下面把 hook 放入方法体里面会报错
+        // useEffect(() => {
+        //   const [name, setName] = useState(''); // 错误：在嵌套函数中
+        // }, []);
+
         return (
           <div>
             <h1>Count: {count}</h1>
