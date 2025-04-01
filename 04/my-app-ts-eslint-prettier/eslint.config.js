@@ -1,9 +1,9 @@
-import { defineConfig } from 'eslint/config';
-import globals from 'globals';
-import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import pluginReact from 'eslint-plugin-react';
-import prettier from 'eslint-plugin-prettier';
+import { defineConfig } from 'eslint/config'
+import globals from 'globals'
+import js from '@eslint/js'
+import tseslint from 'typescript-eslint'
+import pluginReact from 'eslint-plugin-react'
+import prettier from 'eslint-plugin-prettier'
 
 export default defineConfig([
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
@@ -19,12 +19,15 @@ export default defineConfig([
     },
   },
   {
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     plugins: {
-      prettier: prettier,
+      prettier,
     },
     rules: {
-      'prettier/prettier': 'error',
+      'prettier/prettier': ['error', { semi: false }],
+      'no-unused-vars': 'error',
+      '@typescript-eslint/no-unused-vars': 'error',
+      semi: ['error', 'never'],
     },
-    extends: ['plugin:prettier/recommended'],
   },
-]);
+])

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '../public/vite.svg';
-import './App.css';
+import React, { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '../public/vite.svg'
+import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
-  const unuseVar = 'unuse'; // 'unuseVar' is assigned a value but never used.
+  // const unuseVar = '123';
 
   return (
     <>
@@ -27,7 +27,7 @@ function App() {
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
