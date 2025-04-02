@@ -19,7 +19,7 @@ function App() {
       <div className="App">
         {/* 验证 antd */}
         {contextHolder}
-        <Button type='primary' onClick={showInfoByHook}>Antd 按钮(Hook)</Button>
+        <Button type='primary' className='bg-amber-700' onClick={showInfoByHook}>Antd 按钮(Hook)</Button>
         <br /><br />
         <Button type='primary' onClick={showInfoByStaticMethod}>Antd 按钮(静态方法)</Button>
         <br /><br />
