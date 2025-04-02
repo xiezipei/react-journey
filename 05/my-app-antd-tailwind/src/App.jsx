@@ -5,7 +5,10 @@ function App() {
   return (
     <>
       <div className="App">
-        <Button type='primary'>按钮</Button>
+        <Button type='primary'>Antd 按钮</Button>
+        <h1 class="text-3xl font-bold underline">
+          Hello Tailwind!
+        </h1>
       </div>
     </>
   )
