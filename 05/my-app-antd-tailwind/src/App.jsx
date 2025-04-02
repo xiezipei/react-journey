@@ -24,7 +24,7 @@ function App() {
         <Button type='primary' onClick={showInfoByStaticMethod}>Antd 按钮(静态方法)</Button>
         <br /><br />
         {/* 验证 tailwind */}
-        <h1 class="text-3xl font-bold underline">
+        <h1 className="text-3xl font-bold underline">
           Hello Tailwind!
         </h1>
       </div>
